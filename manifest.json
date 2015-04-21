@@ -1,0 +1,17 @@
+{    
+    "manifest_version": 2,
+    "name": "VSO TeamCity connector",
+    "description": "Integrate TeamCity builds into your Visual Studio Online portal",
+    "version": "0.1",
+    "permissions": [
+        "http://my.teamcity.server/*"
+    ],
+    "content_scripts": [{
+        "matches": [ "https://my.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
+        "js": [ "api.js", "pullrequests.js" ]
+    }],
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    }
+}
