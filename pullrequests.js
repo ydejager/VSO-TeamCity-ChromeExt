@@ -43,7 +43,7 @@ function setPrBuildStatus(prEntryEl, branchName, build) {
             break;
 
         default:
-            text = 'No build found for branch' + branchName;
+            text = 'No build found for branch ' + branchName;
             icon = 'waiting-response-transparent';
     }
 
