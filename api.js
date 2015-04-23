@@ -1,10 +1,10 @@
-var config = {
-    // Set this to your TeamCity server URL. TeamCity 8 or higher required
-    teamCityUrl: 'http://my.teamcity.server/',
-
-    // You can find this in the editor of the build under "Build configuration ID"
-    buildType: 'build_configuration_id'
-};
+var config = {};
+withOptions(function(items) {
+  config = {
+    teamCityUrl: items.teamcityUrl,
+    buildType: items.buildType
+  };
+});
 
 function Builds(api) {
     this.getLastByBranchName = function (branchName, callback) {

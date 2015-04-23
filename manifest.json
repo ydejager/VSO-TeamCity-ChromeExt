@@ -3,12 +3,14 @@
     "name": "VSO TeamCity connector",
     "description": "Integrate TeamCity builds into your Visual Studio Online portal",
     "version": "0.1",
+	"options_page": "options.html",
     "permissions": [
-        "http://my.teamcity.server/*"
+		"http://*/*", // Dangerous! Could this be set through the options page somehow?
+		"storage"
     ],
     "content_scripts": [{
-        "matches": [ "https://my.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
-        "js": [ "api.js", "pullrequests.js" ]
+        "matches": [ "https://umbrella.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
+        "js": [ "options.js", "api.js", "pullrequests.js" ]
     }],
     "background": {
         "scripts": [ "background.js" ],
