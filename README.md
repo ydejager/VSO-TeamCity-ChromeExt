@@ -5,4 +5,4 @@ Current version only supports the display of the last build result per pull requ
 
 ## Configuration
 
-You have to edit the api.js and manifest.json to correctly set the URL of your TeamCity server and the build configuration ID of the build that contains all the builds of the different feature branches.
+Open the associated options page of the extensions to correctly set the URL of your TeamCity server and the build configuration ID of the build that contains all the builds of the different feature branches.
