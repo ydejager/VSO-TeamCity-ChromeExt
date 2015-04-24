@@ -9,7 +9,7 @@
 		"storage"
     ],
     "content_scripts": [{
-        "matches": [ "https://umbrella.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
+        "matches": [ "https://*.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
         "js": [ "options.js", "api.js", "pullrequests.js" ]
     }],
     "background": {
