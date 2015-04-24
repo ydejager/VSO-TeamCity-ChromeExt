@@ -1,19 +1,26 @@
-{    
+{
     "manifest_version": 2,
     "name": "VSO TeamCity connector",
     "description": "Integrate TeamCity builds into your Visual Studio Online portal",
     "version": "0.1",
-	"options_page": "options.html",
+    "options_page": "options.html",
     "permissions": [
-		"http://*/*", // Dangerous! Could this be set through the options page somehow?
-		"storage"
+        "http://*/*", // Dangerous! Could this be set through the options page somehow?
+        "storage"
     ],
-    "content_scripts": [{
-        "matches": [ "https://*.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
-        "js": [ "options.js", "api.js", "pullrequests.js" ]
-    }],
+    "content_scripts": [
+        {
+            "matches": [ "https://*.visualstudio.com/DefaultCollection/_git/*/pullrequests*" ],
+            "js": [ "options.js", "api.js", "pullrequests.js" ]
+        }
+    ],
     "background": {
         "scripts": [ "background.js" ],
         "persistent": false
+    },
+    "icons": { 
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" 
     }
 }
