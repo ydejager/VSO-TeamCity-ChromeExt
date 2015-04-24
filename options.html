@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>VSO TeamCity Connector Options</title>
+   </head>
+   <body>
+      <h3>Configuration</h3>
+      <div id="status" style="color:#999900"></div>
+      <table>
+         <tr>
+            <td>
+               <label for="teamcityurl">
+               Teamcity URL*
+               </label>
+            </td>
+            <td>
+               <input type="text" id="teamcityurl">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <label for="buildtype">
+               Buildtype**
+               </label>
+            </td>
+            <td>
+               <input type="text" id="buildtype">
+            </td>
+         <tr>
+            <td>
+               &nbsp;
+            </td>
+            <td>
+               <button id="save">Save</button>
+            </td>
+         </tr>
+      </table>
+	  <p>* Set this to your TeamCity server URL. TeamCity 8 or higher required</p>
+	  <p>** You can find this in the editor of the build under "Build configuration ID"</p>
+      <script src="options.js"></script>
+	  <script src="optionspage.js"></script>
+   </body>
+</html>
