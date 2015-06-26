@@ -6,6 +6,7 @@
     "options_page": "options.html",
     "permissions": [
         "http://*/*", // Dangerous! Could this be set through the options page somehow?
+        "https://*/*", 
         "storage"
     ],
     "content_scripts": [
